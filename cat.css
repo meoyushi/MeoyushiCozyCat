@@ -1,0 +1,146 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: #fcecd1;
+    /* Cream background */
+}
+
+.cat {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transition: background-color 0.3s ease;
+}
+
+.cat-body {
+    position: absolute;
+    bottom: 0;
+    width: 140px;
+    height: 100px;
+    background: #b68973;
+    /* Coffee color */
+    border-radius: 70px 70px 40px 40px;
+    box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.2);
+}
+
+.cat-tail {
+    position: absolute;
+    top: 40px;
+    right: -40px;
+    width: 60px;
+    height: 20px;
+    background: #b68973;
+    border-radius: 20px;
+    transform-origin: left center;
+    animation: wag-tail 2s infinite ease-in-out;
+}
+
+@keyframes wag-tail {
+    0%,
+    100% {
+        transform: rotate(15deg);
+    }
+    50% {
+        transform: rotate(-15deg);
+    }
+}
+
+.cat-head {
+    position: sticky;
+    top: -60px;
+    left: 30px;
+    width: 100px;
+    height: 100px;
+    background: #b68973;
+    border-radius: 50%;
+    box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+.cat-ear {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: #b68973;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.cat-ear.left {
+    top: -10px;
+    left: 10px;
+}
+
+.cat-ear.right {
+    top: -10px;
+    right: 10px;
+}
+
+.cat-eye {
+    position: absolute;
+    top: 40px;
+    width: 10px;
+    height: 10px;
+    background: black;
+    border-radius: 50%;
+    animation: blink 5s infinite;
+}
+
+.cat-eye.left {
+    left: 25px;
+}
+
+.cat-eye.right {
+    right: 25px;
+}
+
+@keyframes blink {
+    0%,
+    90%,
+    100% {
+        transform: scaleY(1);
+    }
+    95% {
+        transform: scaleY(0.1);
+    }
+}
+
+.cat-nose {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15px;
+    height: 10px;
+    background: pink;
+    border-radius: 50%;
+}
+
+.cat-mouth {
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 20px;
+    background: transparent;
+    border-radius: 0 0 15px 15px;
+    border: 2px solid black;
+    border-top: none;
+}
+
+.cat-joint {
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15px;
+    height: 15px;
+    background: #8e5f4d;
+    border-radius: 50%;
+}
+
+ :root {
+    --cat-color: #b68973;
+}

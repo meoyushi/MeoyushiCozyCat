@@ -1,0 +1,13 @@
+{
+    "manifest_version": 3,
+    "name": "MeoyushiCozyCat",
+    "version": "1.0",
+    "description": "your cat's by your side like rapunzel had her chameleon!",
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "64": "cat64.png"
+        }
+    },
+    "permissions": []
+}
